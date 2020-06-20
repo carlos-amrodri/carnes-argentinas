@@ -1,0 +1,76 @@
+/* Caption 1 */
+#caption1 {
+    position: absolute; 
+    right: 5px;
+    top: 5px; /* Cambiar bottom por top y los píxeles que necesites */
+    left: 40%;
+    bottom: 10px;
+    z-index: 10;
+    padding: 10px;
+    border-radius: 1rem;
+    color: #fff;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.5); /* Añadir para conseguir el fondo con opacidad */
+}
+.font1{
+    font-family: 'Merriweather', serif !important;
+}
+#marcaBanner{
+    font-family: 'Piedra', cursive !important;
+    color: #fa697d !important;
+}
+#btn1{
+    color: #fa697d;
+}
+
+/* Caption 2 */
+#caption2 {
+    position: absolute; 
+    right: 5px;
+    top: 60%; /* Cambiar bottom por top y los píxeles que necesites */
+    left: 5px;
+    bottom: 5px;
+    z-index: 10;
+    padding: 5px;
+    border-radius: 1rem;
+    color: #fff;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.5); /* Añadir para conseguir el fondo con opacidad */
+}
+
+.font2{
+    font-family: 'Fjalla One', sans-serif !important;
+    font-weight: 400 !important;
+}
+#btn2{
+    background-color: #fa697d !important;
+    color: whitesmoke !important;
+}
+
+/* CAPTION 3 */
+#caption3 {
+    position: absolute; 
+    right: 5px;
+    top: 5px; /* Cambiar bottom por top y los píxeles que necesites */
+    left: 5px;
+    bottom: 60%;
+    z-index: 10;
+    padding: 5px;
+    border-radius: 1rem;
+    color: #fff;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.5); /* Añadir para conseguir el fondo con opacidad */
+}
+
+/* Listado  */
+.lista{
+    /* background-color: #cfd8dc; */
+}
+i{
+    color: #fa697d;
+}
+.lista h3,p{
+    font-family: 'Josefin Sans', sans-serif;
+    font-style: italic;
+    color: #37474f;
+}
