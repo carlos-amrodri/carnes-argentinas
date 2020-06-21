@@ -9,6 +9,9 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatDialogModule} from '@angular/material/dialog';
 import { NavbarComponent } from './shared/navbar/navbar.component';
 import { HomeComponent } from './pages/home/home.component';
+import { ListHomeDialogComponent } from './dialog/list-home-dialog/list-home-dialog.component';
+import {HttpClientModule} from '@angular/common/http';
+import { from } from 'rxjs';
 
 
 
@@ -17,7 +20,8 @@ import { HomeComponent } from './pages/home/home.component';
   declarations: [
     AppComponent,
     NavbarComponent,
-    HomeComponent
+    HomeComponent,
+    ListHomeDialogComponent
   ],
   imports: [
     BrowserModule,
@@ -25,7 +29,8 @@ import { HomeComponent } from './pages/home/home.component';
     BrowserAnimationsModule,
     MatSliderModule,
     MatIconModule,
-    MatDialogModule
+    MatDialogModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

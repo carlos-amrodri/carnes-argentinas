@@ -27,20 +27,28 @@
     </div>
   </div>
 
-
+<!-- Listado -->
   <div class="container lista p-2">
     <div class="border shadow p-1 rounded">
       <div class="row ">
         <div class="col-1"><i class="material-icons">sentiment_satisfied_alt</i></div>
-        <div class="col-5 pl-4"><p class="text-capitalize font-weight-bold">sin hacer cola</p></div>
+        <div class="col-5 pl-4">
+            <p class="text-capitalize font-weight-bold" (click)="openDialog(1)">sin hacer cola</p>
+        </div>
         <div class="col-1"><i class="material-icons">how_to_reg</i></div>
-        <div class="col-5 pl-4 align-items-center"><p class="text-capitalize font-weight-bold">sin Registrarse</p></div>
+        <div class="col-5 pl-4 align-items-center">
+            <p class="text-capitalize font-weight-bold" (click)="openDialog(2)">sin Registrarse</p>
+        </div>
       </div>
       <div class="row border-bottom">
         <div class="col-1"><i class="material-icons">add_business</i></div>
-        <div class="col-5 pl-4"><p class="text-capitalize font-weight-bold">retiros por nuestro local</p></div>
+        <div class="col-5 pl-4">
+            <p class="text-capitalize font-weight-bold" (click)="openDialog(3)">retiros por nuestro local</p>
+        </div>
         <div class="col-1"><i class="material-icons">electric_moped</i></div>
-        <div class="col-5 pl-4"><p class="text-capitalize font-weight-bold">envíos en el día</p></div>
+        <div class="col-5 pl-4">
+            <p class="text-capitalize font-weight-bold" (click)="openDialog(4)">envíos en el día</p>
+        </div>
       </div>
       <div class="row ">
         <div class="col-1"><i class="material-icons">local_atm</i></div>
