@@ -1,3 +1,5 @@
+/* carrousel */
+
 /* Caption 1 */
 #caption1 {
     position: absolute; 
@@ -14,6 +16,9 @@
 }
 .font1{
     font-family: 'Merriweather', serif !important;
+}
+#subt1{
+    color: #b0bec5;
 }
 #marcaBanner{
     font-family: 'Piedra', cursive !important;
@@ -67,10 +72,95 @@
     /* background-color: #cfd8dc; */
 }
 i{
-    color: #fa697d;
+    /* color: #fa697d; */
+    color: #e91e63;
 }
-.lista h3,p{
+.lista h3,h4{
     font-family: 'Josefin Sans', sans-serif;
     font-style: italic;
     color: #37474f;
 }
+
+
+/* tamaños */
+/* // Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) { 
+    img.logoBan{
+        max-height: 40px !important;
+        max-width: 40px !important;
+        margin-top: 2px !important;
+    }
+    .font1{
+        padding-bottom: 2px;
+        margin-bottom: 2px;
+        font-size: 1rem;
+    }
+    #subt1{
+        
+    }
+    #marcaBanner{
+        margin-bottom: 2px;
+    }
+ }
+
+/* // Small devices (landscape phones, less than 768px) */
+@media (max-width: 767.98px) {  }
+
+/* // Medium devices (tablets, less than 992px) */
+@media (max-width: 991.98px) {  }
+
+/* // Large devices (desktops, less than 1200px) */
+@media (max-width: 1199.98px) {  }
+
+
+
+
+/* // Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) { 
+
+ }
+
+/* // Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) { 
+
+ }
+
+/* // Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {  }
+
+/* // Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) { 
+    .font1{
+        font-size: 3rem;
+    }
+    #subt1{
+        font-size: 2em;
+    }
+    #marcaBanner{
+        font-size: 3.6rem;
+    }
+    img.logoBan{
+        max-height: 100% !important;
+        max-width: 100% !important;
+    }
+    .carousel-item{
+        max-height: 540px;
+    }
+    .font2{
+        font-size: 4em;
+        padding: 15px;
+    }
+
+    .lista h4{
+        font-size: 1.6rem;
+    }
+    .lista h3{
+        font-size: 1.8rem;
+    }
+    .lista i{
+        font-size: xx-large;
+    }
+    #mpImage{
+        max-width: 80px;
+    }
+ }

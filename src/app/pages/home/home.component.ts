@@ -27,13 +27,11 @@ export class HomeComponent implements OnInit {
   }
 
   openDialog(id : number){
-    console.log('seleccion a:' + id);
     this.infoList.lista.forEach(info =>{
       if(info.id == id){
         this.mostrar = info;
       }
     })
-    console.log('seleccion :' + this.mostrar.id);
     const dialogref = this.dialog.open(ListHomeDialogComponent,{
       data : {ico : this.mostrar.icono, titulo : this.mostrar.titulo, subt : this.mostrar.subtitulo,
       descri : this.mostrar.descripcion}
