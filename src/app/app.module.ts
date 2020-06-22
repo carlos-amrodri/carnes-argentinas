@@ -13,6 +13,7 @@ import { ListHomeDialogComponent } from './dialog/list-home-dialog/list-home-dia
 import {HttpClientModule} from '@angular/common/http';
 import { from } from 'rxjs';
 import { OfertasComponent } from './pages/ofertas/ofertas.component';
+import { FooterComponent } from './pages/footer/footer.component';
 
 
 
@@ -23,7 +24,8 @@ import { OfertasComponent } from './pages/ofertas/ofertas.component';
     NavbarComponent,
     HomeComponent,
     ListHomeDialogComponent,
-    OfertasComponent
+    OfertasComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
