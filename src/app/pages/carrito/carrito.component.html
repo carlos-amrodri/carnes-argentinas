@@ -1,0 +1,55 @@
+<!-- Cabecera -->
+<div>
+    <div class="container">
+        <div class="row mt-3 py-md-2">
+            <div class="col-md-6">
+                <table>
+                    <tr>
+                        <td>
+                            <h4>Su compra lleva un valor de</h4>
+                        </td>
+                        <td>
+                            <h3>$550</h3>
+                        </td>
+                        <td>
+                            <p class="ml-4">
+                                <mat-icon matBadge="15" matBadgeColor="warn">add_shopping_cart</mat-icon>
+                            </p>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="col-md-6">
+                <table>
+                    <tr>
+                        <td><input class="form-control mr-sm-2" type="search" placeholder="Buscar" aria-label="Search"></td>
+                        <td><mat-icon >search</mat-icon></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Productos -->
+<div>
+    <div class="container mt-3">
+        <div class="row">
+            <div *ngFor="let produ of servProducto.carnes">
+                <div class="col-md-4 col-xs-12">
+                    <div class="card" style="width: 18rem;">
+                        <img class="card-img-top" src="/assets/img/productos/{{produ.url}}.jpg" alt="Card image cap">
+                        <div class="card-body">
+                          <h1 class="card-title">{{produ.titulo}}</h1>
+                          <div class="row">
+                            <div class="col-5 col align-self-end"><h2>${{produ.precio}} Kg</h2></div>
+                            <div class="col-6 col align-self-end"><h4 class="tachado">${{produ.subprecio}} Kg</h4></div>
+                        </div>
+                          <a href="#" class="btn btn-primary">Comprar</a>
+                        </div>
+                      </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
