@@ -6,14 +6,14 @@
                 <table>
                     <tr>
                         <td>
-                            <h4>Su compra lleva un valor de</h4>
+                            <h3>Su compra lleva un valor de</h3>
                         </td>
                         <td>
-                            <h3>$550</h3>
+                            <h2 class="font-weight-bold">${{monto}}</h2>
                         </td>
                         <td>
                             <p class="ml-4">
-                                <mat-icon matBadge="15" matBadgeColor="warn">add_shopping_cart</mat-icon>
+                                <mat-icon matBadge="{{badge}}" matBadgeColor="warn">add_shopping_cart</mat-icon>
                             </p>
                         </td>
                     </tr>
@@ -34,22 +34,49 @@
 <!-- Productos -->
 <div>
     <div class="container mt-3">
-        <div class="row">
-            <div *ngFor="let produ of servProducto.carnes">
-                <div class="col-md-4 col-xs-12">
-                    <div class="card" style="width: 18rem;">
-                        <img class="card-img-top" src="/assets/img/productos/{{produ.url}}.jpg" alt="Card image cap">
-                        <div class="card-body">
-                          <h1 class="card-title">{{produ.titulo}}</h1>
-                          <div class="row">
-                            <div class="col-5 col align-self-end"><h2>${{produ.precio}} Kg</h2></div>
-                            <div class="col-6 col align-self-end"><h4 class="tachado">${{produ.subprecio}} Kg</h4></div>
-                        </div>
-                          <a href="#" class="btn btn-primary">Comprar</a>
-                        </div>
-                      </div>
+    <mat-tab-group>
+        <mat-tab label="Carne Vacuna">
+            <div class="row">
+                <div *ngFor="let produ of servProducto.carnes">
+                    <div class="col-md-4 col-xs-12 mt-2">
+                        <div class="card" style="width: 18rem;">
+                            <img class="card-img-top" src="/assets/img/productos/{{produ.url}}.jpg" alt="Card image cap">
+                            <div *ngIf="produ.oferta" class="ofertaCaption">
+                                <h1>Oferta</h1>
+                            </div>
+                            <div class="card-body">
+                              <h1 class="card-title">{{produ.titulo}}</h1>
+                              <div class="row">
+                                <div class="col-5 col align-self-end"><h2>${{produ.precio}} Kg</h2></div>
+                                <div *ngIf="produ.subprecio" class="col-6 col align-self-end"><h4 class="tachado">${{produ.subprecio}} Kg</h4></div>
+                            </div>
+                              <a (click)="clickComprar(produ)" class="btn">Comprar</a>
+                            </div>
+                          </div>
+                    </div>
                 </div>
             </div>
-        </div>
+        </mat-tab>
+        <mat-tab label="Cerne de Cerdo">
+            <div class="row">
+                <div *ngFor="let cerd of servProducto.porcinos">
+                    <div class="col-md-4 col-xs-12">
+                        <div class="card" style="width: 18rem;">
+                            <img class="card-img-top" src="/assets/img/productos/{{cerd.url}}.jpg" alt="Card image cap">
+                            <div class="card-body">
+                              <h1 class="card-title">{{cerd.titulo}}</h1>
+                              <div class="row">
+                                <div class="col-5 col align-self-end"><h2>${{cerd.precio}} Kg</h2></div>
+                                <div class="col-6 col align-self-end"><h4 class="tachado">${{cerd.subprecio}} Kg</h4></div>
+                            </div>
+                              <a (click)="clickComprar(cerd)" class="btn">Comprar</a>
+                            </div>
+                          </div>
+                    </div>
+                </div>
+            </div>
+        </mat-tab>
+    </mat-tab-group>
+
     </div>
 </div>

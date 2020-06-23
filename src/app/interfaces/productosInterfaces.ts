@@ -7,4 +7,5 @@ export interface iProducto
     subtitulo? : string;
     precio? : number;
     subprecio? : number;
+    oferta? : boolean;
 }

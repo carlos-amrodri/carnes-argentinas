@@ -1,10 +1,19 @@
 .dhead{
-    background-color: #fce4ec;
+    background-color: #fa697d;
+    border-radius: 1rem;
+}
+.dhead i{
+    color: #e6ee9c;
 }
 .dhead h4{
-    color: #37474f;
+    color: #dce775;
     font-family: 'Josefin Sans', sans-serif;
 }
 .dhead h2{
     font-family: 'Fjalla One', sans-serif;
+    color: #f0f4c3;
+}
+button{
+    background-color: #fa697d;
+    color: #dce775;
 }

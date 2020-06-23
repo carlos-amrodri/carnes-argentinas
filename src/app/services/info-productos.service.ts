@@ -30,6 +30,7 @@ export class InfoProductosService {
 
   private loadSecciones(){
     this.loadProductos().then( ()=>{
+      console.log('productos' + this.productos.length)
       this.productos.forEach( prod =>{
         if(prod.type == 1){
           this.carnes.push(prod);

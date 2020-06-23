@@ -1,3 +1,21 @@
 .tachado{
     text-decoration: line-through;
 }
+.ofertaCaption{
+    position: absolute; 
+    right: 5px;
+    top: 5px; /* Cambiar bottom por top y los píxeles que necesites */
+    left: 5px;
+    bottom: 85%;
+    z-index: 10;
+    padding: 5px;
+    border-radius: 1rem;
+    color: #eceff1;
+    text-align: center;
+    background-color: rgba(243, 102, 123, 0.6); /* Añadir para conseguir el fondo con opacidad */
+}
+
+a{
+    background-color: #fa697d;
+    color: whitesmoke;
+}
