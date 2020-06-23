@@ -34,13 +34,13 @@
         (change)= "cambioPrecio()">
     </mat-slider>
     </div>
-
+    
     <div class="row">
         <div class="col-6">
-            <button class="btn btn-compra btn-outline">COMPRAR</button>
+            <button class="btn btn-compra btn-outline" [mat-dialog-close]="producto">COMPRAR</button>
         </div>
         <div class="col-6">
-            <button class="btn btn-outline-secondary" mat-dialog-close>CANCELAR</button>
+            <button class="btn btn-outline-secondary" (click)="cerrar()">CANCELAR</button>
         </div>
     </div>
    

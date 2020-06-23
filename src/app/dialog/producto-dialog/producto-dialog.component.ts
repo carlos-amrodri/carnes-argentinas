@@ -46,10 +46,15 @@ export class ProductoDialogComponent implements OnInit {
 
   cambioPrecio(){
     var calc = this.value / 4;
-    console.log('el valor es' + this.value + 'y calc ' + calc);
-    this.precio = "$" + this.precioBase * calc;
-    var res= this.value / 4;
-    this.peso = "Kg " + res;
+    var precComp = calc * this.precioBase
+    this.precio = "$" + precComp;
+    this.peso = "Kg " + calc;
+    this.producto.cantidad = calc;
+    this.producto.precioCompa = precComp;
+  }
+
+  cerrar(){
+    this.dialogRef.close();
   }
 
 }

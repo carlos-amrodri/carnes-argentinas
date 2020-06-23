@@ -8,4 +8,6 @@ export interface iProducto
     precio? : number;
     subprecio? : number;
     oferta? : boolean;
+    cantidad? : number;
+    precioCompa? : number;
 }
