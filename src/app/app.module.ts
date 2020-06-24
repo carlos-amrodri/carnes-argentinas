@@ -13,6 +13,8 @@ import {MatTabsModule} from '@angular/material/tabs';
 import {MatButtonModule} from '@angular/material/button';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
+import {MatGridListModule} from '@angular/material/grid-list';
+import {MatDividerModule} from '@angular/material/divider';
 
 import { NavbarComponent } from './shared/navbar/navbar.component';
 import { HomeComponent } from './pages/home/home.component';
@@ -23,6 +25,7 @@ import { OfertasComponent } from './pages/ofertas/ofertas.component';
 import { FooterComponent } from './shared/footer/footer.component';
 import { CarritoComponent } from './pages/carrito/carrito.component';
 import { ProductoDialogComponent } from './dialog/producto-dialog/producto-dialog.component';
+import { CompraComponent } from './pages/compra/compra.component';
 
 
 
@@ -36,7 +39,8 @@ import { ProductoDialogComponent } from './dialog/producto-dialog/producto-dialo
     OfertasComponent,
     FooterComponent,
     CarritoComponent,
-    ProductoDialogComponent
+    ProductoDialogComponent,
+    CompraComponent
   ],
   imports: [
     BrowserModule,
@@ -51,6 +55,8 @@ import { ProductoDialogComponent } from './dialog/producto-dialog/producto-dialo
     MatFormFieldModule,
     FormsModule,
     MatInputModule,
+    MatGridListModule,
+    MatDividerModule,
     HttpClientModule
   ],
   providers: [],

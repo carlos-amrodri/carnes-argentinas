@@ -42,7 +42,10 @@ export class ProductoDialogComponent implements OnInit {
     return calc + "Kg";
   }
 
-
+  confirmar(){
+    this.producto.adquirido = true;
+    this.dialogRef.close(this.producto);
+  }
 
   cambioPrecio(){
     var calc = this.value / 4;

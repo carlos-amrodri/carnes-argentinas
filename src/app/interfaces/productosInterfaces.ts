@@ -10,4 +10,5 @@ export interface iProducto
     oferta? : boolean;
     cantidad? : number;
     precioCompa? : number;
+    adquirido? : boolean;
 }

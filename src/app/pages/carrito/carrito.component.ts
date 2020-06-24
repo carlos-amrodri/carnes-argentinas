@@ -35,13 +35,14 @@ export class CarritoComponent implements OnInit {
     });
 
     dialogRef.afterClosed().subscribe((result : iProducto) =>{
-      console.log('el resultado es' + result.cantidad);
-      this.carrito.push(result);
-      this.badge = this.carrito.length;
-      this.monto = 0;
-      this.carrito.forEach(prod =>{
-        this.monto += prod.precioCompa;
-      });
+      if(result.adquirido){
+        this.servProducto.addProducCarrito(result);
+        this.badge = this.servProducto.carrito.length;
+        this.monto = 0;
+        this.servProducto.carrito.forEach(prdo =>{
+            this.monto += prdo.precioCompa;
+        });
+      }
     });
   }
 }

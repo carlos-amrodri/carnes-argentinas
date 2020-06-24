@@ -13,10 +13,15 @@ export class InfoProductosService {
   porcinos : iProducto[] = [];
   pollos : iProducto[] = [];
   achuras : iProducto[] = [];
+  carrito : iProducto[] = [];
 
   constructor(private http : HttpClient) {
     this.loadSecciones();
    }
+
+  addProducCarrito(produ : iProducto){
+      this.carrito.push(produ);
+  }
 
   private loadProductos(){
     return new Promise((resolve, rejects) =>{

@@ -37,7 +37,8 @@
     
     <div class="row">
         <div class="col-6">
-            <button class="btn btn-compra btn-outline" [mat-dialog-close]="producto">COMPRAR</button>
+            <button class="btn btn-compra btn-outline" (click)="confirmar()">COMPRAR</button>
+            <!-- <button class="btn btn-compra btn-outline" [mat-dialog-close]="producto">COMPRAR</button> -->
         </div>
         <div class="col-6">
             <button class="btn btn-outline-secondary" (click)="cerrar()">CANCELAR</button>
