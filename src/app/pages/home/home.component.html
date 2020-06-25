@@ -29,35 +29,48 @@
   </div>
 
 <!-- Listado -->
-  <div class="container lista p-2">
-    <div class="border shadow p-1 rounded">
-      <div class="row mt-3">
-        <div class="col-1 text-center"><i class="material-icons">sentiment_satisfied_alt</i></div>
-        <div class="col-5 pl-4">
-            <h4 class="text-capitalize font-weight-bold" (click)="openDialog(1)">sin hacer cola</h4>
-        </div>
-        <div class="col-1 text-center"><i class="material-icons">how_to_reg</i></div>
-        <div class="col-5 pl-4 align-items-center">
-            <h4 class="text-capitalize font-weight-bold" (click)="openDialog(2)">sin Registrarse</h4>
+  <div class="container mt-2">
+    <div class="row">
+      <!-- Lista de funciones -->
+      <div class="col-8 btnlist">
+        <div class="row">
+          <div class="col-12 col-md-6 mt-2">
+            <button mat-raised-button (click)="openDialog(1)">
+              <mat-icon color="accent">sentiment_satisfied_alt</mat-icon>
+                Sin hacer Cola
+              </button>
+          </div>
+
+          <div class="col-12 col-md-6 mt-3">
+            <button mat-raised-button (click)="openDialog(2)">
+              <mat-icon color="accent">how_to_reg</mat-icon>
+                Sin Registrarse
+            </button>
+          </div>
+
+          <div class="col-12 col-md-6 mt-3">
+            <button mat-raised-button (click)="openDialog(3)">
+              <mat-icon color="accent">add_business</mat-icon>
+                Retiro Programado
+            </button>
+          </div>
+
+          <div class="col-12 col-md-6 mt-3">
+            <button mat-raised-button (click)="openDialog(4)">
+              <mat-icon color="accent">electric_moped</mat-icon>
+                Envíos
+            </button>
+          </div>
         </div>
       </div>
-      <div class="row border-bottom">
-        <div class="col-1 text-center"><i class="material-icons">add_business</i></div>
-        <div class="col-5 pl-4">
-            <h4 class="text-capitalize font-weight-bold" (click)="openDialog(3)">retiros por nuestro local</h4>
-        </div>
-        <div class="col-1 text-center"><i class="material-icons">electric_moped</i></div>
-        <div class="col-5 pl-4">
-            <h4 class="text-capitalize font-weight-bold" (click)="openDialog(4)">envíos en el día</h4>
-        </div>
-      </div>
-      <div class="row mt-3">
-        <div class="col-1 text-center"><i class="material-icons">local_atm</i></div>
-        <div class="col-8 pl-4 align-items-center"><h3 class="text-capitalize font-weight-bold">cualquier medio de pago</h3></div>
-        <div class="col-3"><img src="/assets/img/mpago.png" alt="" class="img-fluid w-75" id="mpImage"></div>
+      <!-- Formas de pago -->
+      <div class="col-4 text-center">
+        <h2>Cualquier Medio de Pago</h2>
+        <img src="/assets/img/mpago.png" alt="" class="img-fluid w-75" id="mpImage">
       </div>
     </div>
   </div>
-  <!-- Ofertas -->
   
+
+<!-- Ofertas -->
 <app-ofertas></app-ofertas>

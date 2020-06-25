@@ -15,6 +15,7 @@ export class CarritoComponent implements OnInit {
   badge : number;
   monto : number = 0;
 
+
   constructor(public servProducto : InfoProductosService,
     private dialog : MatDialog) { }
 
@@ -36,6 +37,7 @@ export class CarritoComponent implements OnInit {
 
     dialogRef.afterClosed().subscribe((result : iProducto) =>{
       if(result.adquirido){
+        this.servProducto.changeProducto(result);
         this.servProducto.addProducCarrito(result);
         this.badge = this.servProducto.carrito.length;
         this.monto = 0;

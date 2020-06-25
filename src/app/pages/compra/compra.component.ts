@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { InfoProductosService } from '../../services/info-productos.service';
 
 
 
@@ -12,7 +13,10 @@ export class CompraComponent implements OnInit {
 
 total = '3,5 Kg';
 
-  constructor() { }
+  constructor(public productoserivcio : InfoProductosService) { 
+    
+
+  }
 
   ngOnInit(): void {
   }

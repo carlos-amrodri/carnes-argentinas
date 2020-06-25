@@ -81,7 +81,9 @@ i{
     color: #37474f;
 }
 
-
+.btnlist button{
+   width: 100%;
+}
 /* tamaños */
 /* // Extra small devices (portrait phones, less than 576px) */
 @media (max-width: 575.98px) { 

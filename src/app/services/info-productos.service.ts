@@ -23,6 +23,15 @@ export class InfoProductosService {
       this.carrito.push(produ);
   }
 
+  changeProducto(produc : iProducto){
+    this.carnes.forEach( p =>{
+      if (p.id == produc.id){
+        p.adquirido = true;
+      }
+    });
+
+  }
+
   private loadProductos(){
     return new Promise((resolve, rejects) =>{
       this.http.get('assets/data/productos.js')
@@ -35,7 +44,6 @@ export class InfoProductosService {
 
   private loadSecciones(){
     this.loadProductos().then( ()=>{
-      console.log('productos' + this.productos.length)
       this.productos.forEach( prod =>{
         if(prod.type == 1){
           this.carnes.push(prod);

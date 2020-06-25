@@ -6,7 +6,7 @@
                 <table>
                     <tr>
                         <td>
-                            <h3>Su compra lleva un valor de</h3>
+                            <h3>Su compra lleva </h3>
                         </td>
                         <td>
                             <h2 class="font-weight-bold">${{monto}}</h2>
@@ -39,7 +39,7 @@
             <div class="row">
                 <div *ngFor="let produ of servProducto.carnes">
                     <div class="col-md-4 col-xs-12 mt-2">
-                        <div class="card" style="width: 18rem;">
+                        <div class="card" style="width: 18rem;" [ngStyle]="{'background-color': produ.adquirido ? '#c8e6c9' : 'whitesmoke'}">
                             <img class="card-img-top" src="/assets/img/productos/{{produ.url}}.jpg" alt="Card image cap">
                             <div *ngIf="produ.oferta" class="ofertaCaption">
                                 <h1>Oferta</h1>
@@ -50,7 +50,19 @@
                                 <div class="col-5 col align-self-end"><h2>${{produ.precio}} Kg</h2></div>
                                 <div *ngIf="produ.subprecio" class="col-6 col align-self-end"><h4 class="tachado">${{produ.subprecio}} Kg</h4></div>
                             </div>
-                              <a (click)="clickComprar(produ)" class="btn">Comprar</a>
+                              <!-- <a (click)="clickComprar(produ)" class="btn">Comprar</a> -->
+                            </div>
+                            <div class="card-footer">
+                                <div class="row">
+                                    <div class="col-6" *ngIf="!produ.adquirido">
+                                        <button mat-raised-button color="accent" (click)="clickComprar(produ)">COMPRAR</button>
+                                    </div>
+                                    <div *ngIf="produ.adquirido" class="col-6">
+                                        <button mat-mini-fab id="check">
+                                            <mat-icon>done_outline</mat-icon>
+                                        </button>
+                                    </div>
+                                </div>
                             </div>
                           </div>
                     </div>
