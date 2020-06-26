@@ -1,0 +1,80 @@
+
+<div class="row">
+  <div class="col-8">
+    <mat-card class="m-2">Finalizar la Compra</mat-card>
+  </div>
+  <div class="col-2 pt-3">
+    <button mat-raised-button routerLink="/compra">VOLVER</button>
+  </div>
+</div>
+<mat-vertical-stepper linear #stepper>
+    <mat-step >
+      <ng-template matStepLabel>Seleccione el método de entrega</ng-template>
+      <!-- <h1>Nuestro local</h1>
+      <iframe src="https://www.google.com/maps/d/embed?mid=1rsvZJ81rZKyIxOtqj3Zcgw6DSsbJJyRg&hl=es-419" width="250" height="250"></iframe> -->
+      <mat-radio-group aria-label="Select an option">
+        <mat-radio-button value="1" (click)="checkEnvio(1)">Retiro por el local</mat-radio-button>
+        <mat-radio-button value="2" (click)="checkEnvio(2)">Envío a su domicilio</mat-radio-button>
+      </mat-radio-group>
+      <div>
+        <button mat-raised-button matStepperNext>Próximo</button>
+      </div>
+    </mat-step>
+    <mat-step >
+      <ng-template matStepLabel>Notificación del pedido</ng-template>
+      <div *ngIf="!select">
+        <div class="alert alert-danger" role="alert">
+          "Es necesario que seleccione un método de entrega"
+        </div>
+      </div>
+      <div *ngIf="select">
+        <div class="alert alert-warning" role="alert">
+          IMPORTANTE! Le pediremos que acepte recibir notificaciones, para poder notificarle cuando este listo su pedido :)
+        </div>
+      </div>
+      <div *ngIf="domicilio">
+        <h4>Tu Domicilio</h4>
+        <div class="row example-container">
+          <p>
+            <mat-form-field appearance="legacy">
+              <mat-label>Calle</mat-label>
+              <input matInput placeholder="Calle">
+              <mat-icon matSuffix>house</mat-icon>
+              <mat-hint>Hipolito Yrigoyen</mat-hint>
+            </mat-form-field>
+          </p>
+          <p>
+            <mat-form-field appearance="legacy">
+              <mat-label>Número</mat-label>
+              <input matInput placeholder="Altura">
+              <mat-icon matSuffix>money</mat-icon>
+              <mat-hint>1250</mat-hint>
+            </mat-form-field>
+          </p>
+        </div>
+      </div>
+      <div>
+        <button mat-raised-button matStepperPrevious>Atrás</button>
+        <button mat-raised-button matStepperNext>Próximo</button>
+      </div>
+    </mat-step>
+    <mat-step>
+      <ng-template matStepLabel>Finalizamos</ng-template>
+      <div class="alert alert-success" role="alert">
+        Gracias por tu compra!! para finalizar podrás realizar el pago, y te notificaremos ni bien esté listo tu pedido.
+      </div>
+      <div class="row">
+        <div class="col-6">
+          <img src="../../../assets/img/mercpago.jpg" class="img-fluid" alt="">
+        </div>
+        <div class="col-6">
+          <button mat-raised-button color="primary">PAGAR</button>
+        </div>
+      </div>
+      <div>
+        <button mat-raised-button matStepperPrevious>Atrás</button>
+        <button mat-raised-button (click)="stepper.reset()">Limpiar</button>
+      </div>
+    </mat-step>
+  </mat-vertical-stepper>
+

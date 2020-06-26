@@ -1,7 +1,7 @@
 <!-- Cabecera -->
 <div>
     <div class="container">
-        <div class="row mt-3 py-md-2">
+        <div class="row mt-3 py-md-2" routerLink="/compra">
             <div class="col-md-6">
                 <table>
                     <tr>
@@ -9,11 +9,11 @@
                             <h3>Su compra lleva </h3>
                         </td>
                         <td>
-                            <h2 class="font-weight-bold">${{monto}}</h2>
+                            <h2 class="font-weight-bold">${{servProducto.getTotal()}}</h2>
                         </td>
                         <td>
                             <p class="ml-4">
-                                <mat-icon matBadge="{{badge}}" matBadgeColor="warn">add_shopping_cart</mat-icon>
+                                <mat-icon [matBadge]="badge" matBadgeColor="warn" matBadgeSize="medium">add_shopping_cart</mat-icon>
                             </p>
                         </td>
                     </tr>

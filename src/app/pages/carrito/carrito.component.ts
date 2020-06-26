@@ -17,7 +17,9 @@ export class CarritoComponent implements OnInit {
 
 
   constructor(public servProducto : InfoProductosService,
-    private dialog : MatDialog) { }
+    private dialog : MatDialog) { 
+      this.badge = servProducto.carrito.length;
+    }
 
   ngOnInit(): void {
   }

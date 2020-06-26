@@ -12,3 +12,6 @@ mat-form-field.mat-form-field {
     font-weight: bold !important;
     color: #ec407a;
 }
+.button-row button{
+    width: 150px;
+}

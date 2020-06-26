@@ -32,6 +32,19 @@ export class InfoProductosService {
 
   }
 
+  getTotal(){
+    var total = 0;
+    this.carrito.forEach(prod =>{
+      total += prod.precioCompa;
+    });
+    return total;
+  }
+
+  getCantidad(){
+    var cant = this.carrito.length;
+    return cant;
+  }
+
   private loadProductos(){
     return new Promise((resolve, rejects) =>{
       this.http.get('assets/data/productos.js')

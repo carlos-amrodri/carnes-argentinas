@@ -4,6 +4,7 @@ import { InfoProductosService } from '../../services/info-productos.service';
 
 
 
+
 @Component({
   selector: 'app-compra',
   templateUrl: './compra.component.html',
@@ -13,12 +14,10 @@ export class CompraComponent implements OnInit {
 
 total = '3,5 Kg';
 
-  constructor(public productoserivcio : InfoProductosService) { 
-    
-
-  }
+  constructor(public productoserivcio : InfoProductosService) { }
 
   ngOnInit(): void {
   }
+
 
 }

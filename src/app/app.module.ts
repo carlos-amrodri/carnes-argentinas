@@ -11,10 +11,14 @@ import {MatDialogModule} from '@angular/material/dialog';
 import {MatBadgeModule} from '@angular/material/badge';
 import {MatTabsModule} from '@angular/material/tabs';
 import {MatButtonModule} from '@angular/material/button';
+import {MatRadioModule} from '@angular/material/radio';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
 import {MatGridListModule} from '@angular/material/grid-list';
 import {MatDividerModule} from '@angular/material/divider';
+import {MatCardModule} from '@angular/material/card';
+import {MatStepperModule} from '@angular/material/stepper';
+
 
 import { NavbarComponent } from './shared/navbar/navbar.component';
 import { HomeComponent } from './pages/home/home.component';
@@ -26,6 +30,8 @@ import { FooterComponent } from './shared/footer/footer.component';
 import { CarritoComponent } from './pages/carrito/carrito.component';
 import { ProductoDialogComponent } from './dialog/producto-dialog/producto-dialog.component';
 import { CompraComponent } from './pages/compra/compra.component';
+import { FinCompraComponent } from './dialog/fin-compra/fin-compra.component';
+import { PagoCompraComponent } from './pages/pago-compra/pago-compra.component';
 
 
 
@@ -40,7 +46,9 @@ import { CompraComponent } from './pages/compra/compra.component';
     FooterComponent,
     CarritoComponent,
     ProductoDialogComponent,
-    CompraComponent
+    CompraComponent,
+    FinCompraComponent,
+    PagoCompraComponent
   ],
   imports: [
     BrowserModule,
@@ -57,6 +65,9 @@ import { CompraComponent } from './pages/compra/compra.component';
     MatInputModule,
     MatGridListModule,
     MatDividerModule,
+    MatCardModule,
+    MatStepperModule,
+    MatRadioModule,
     HttpClientModule
   ],
   providers: [],
