@@ -11,6 +11,7 @@ export class PagoCompraComponent implements OnInit {
   select = false;
   domicilio = false;
   arrayclas = ['alert', 'alert-danger'];
+  imagen : string;
 
   constructor() { }
 
@@ -24,10 +25,12 @@ export class PagoCompraComponent implements OnInit {
     if(selec == 1){
       this.segundoTitulo = "Con gusto lo esperaremos en nuestro local";
       this.domicilio = false;
+      this.imagen = "tienda";
     }
     if(selec == 2){
       this.segundoTitulo = "Indique su domicilio y le envieraemos su compra";
       this.domicilio = true;
+      this.imagen = "envio";
     }
   }
 }

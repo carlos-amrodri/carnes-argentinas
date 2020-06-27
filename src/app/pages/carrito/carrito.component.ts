@@ -14,14 +14,27 @@ export class CarritoComponent implements OnInit {
   carrito : iProducto[] = [];
   badge : number;
   monto : number = 0;
+  imagen : string;
+
 
 
   constructor(public servProducto : InfoProductosService,
     private dialog : MatDialog) { 
       this.badge = servProducto.carrito.length;
+      this.imagen = "corteCarne";
     }
 
   ngOnInit(): void {
+  }
+
+  changeTab(c : number){
+    if(c == 0){
+      this.imagen = "corteCarne";
+    }
+    if(c == 1){
+      this.imagen = "corteCerdo";
+    }
+  
   }
 
   clickComprar(producto : iProducto){
@@ -40,7 +53,7 @@ export class CarritoComponent implements OnInit {
 
     dialogRef.afterClosed().subscribe((result : iProducto) =>{
       if(result.adquirido){
-        this.servProducto.changeProducto(result);
+        this.servProducto.changeProducto(result, true);
         this.servProducto.addProducCarrito(result);
         this.badge = this.servProducto.carrito.length;
         this.monto = 0;

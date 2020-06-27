@@ -23,13 +23,38 @@ export class InfoProductosService {
       this.carrito.push(produ);
   }
 
-  changeProducto(produc : iProducto){
-    console.log('Type de producto ' + produc.titulo + ' es: ' + produc.type );
+  removeProductoCarrito(produc : iProducto){
+    var ind = this.carrito.indexOf(produc);
+    if(ind !== -1){
+      this.carrito.splice(ind,1);
+    }
+    this.changeProducto(produc,false);
+  }
+
+  changeCantidad(producto : iProducto, action : number){
+    var ind = this.carrito.indexOf(producto);
+    var p = this.carrito[ind];
+    console.log('La cantidad es: ' + p.cantidad);
+    if (action == 1){
+      //sumo 
+      p.cantidad = p.cantidad + 0.25;
+    }
+    if(action == 2){
+      //Resto
+      p.cantidad = p.cantidad - 0.25;
+    }
+    console.log('La cantidad es: ' + p.cantidad);
+    p.precioCompa = p.precio * p.cantidad;
+    this.carrito[ind] = p;
+    console.log('Finalizado : $' + this.carrito[ind].precioCompa + 'total : ' + this.carrito[ind].cantidad );
+  }
+
+  changeProducto(produc : iProducto, action : boolean){
     if (produc.type == 1){
       //Carne vacuna
       this.carnes.forEach( p =>{
         if (p.id == produc.id){
-          p.adquirido = true;
+          p.adquirido = action;
         }
       });
     }
@@ -37,7 +62,7 @@ export class InfoProductosService {
       //Carne de cerdo
       this.porcinos.forEach( p =>{
         if(p.id == produc.id){
-          p.adquirido = true;
+          p.adquirido = action;
         }
       });
     }
