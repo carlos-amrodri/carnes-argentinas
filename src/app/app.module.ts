@@ -33,6 +33,8 @@ import { CompraComponent } from './pages/compra/compra.component';
 import { FinCompraComponent } from './dialog/fin-compra/fin-compra.component';
 import { PagoCompraComponent } from './pages/pago-compra/pago-compra.component';
 import { MapaComponent } from './pages/mapa/mapa.component';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
 
 
 
@@ -70,7 +72,8 @@ import { MapaComponent } from './pages/mapa/mapa.component';
     MatCardModule,
     MatStepperModule,
     MatRadioModule,
-    HttpClientModule
+    HttpClientModule,
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
   ],
   providers: [],
   bootstrap: [AppComponent]
