@@ -24,12 +24,23 @@ export class InfoProductosService {
   }
 
   changeProducto(produc : iProducto){
-    this.carnes.forEach( p =>{
-      if (p.id == produc.id){
-        p.adquirido = true;
-      }
-    });
-
+    console.log('Type de producto ' + produc.titulo + ' es: ' + produc.type );
+    if (produc.type == 1){
+      //Carne vacuna
+      this.carnes.forEach( p =>{
+        if (p.id == produc.id){
+          p.adquirido = true;
+        }
+      });
+    }
+    if (produc.type == 2){
+      //Carne de cerdo
+      this.porcinos.forEach( p =>{
+        if(p.id == produc.id){
+          p.adquirido = true;
+        }
+      });
+    }
   }
 
   getTotal(){

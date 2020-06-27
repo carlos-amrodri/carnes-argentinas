@@ -34,6 +34,7 @@ export class CarritoComponent implements OnInit {
         "precio" : producto.precio,
         "oferta" : true,
         "cantidad" : 0,
+        "type" : producto.type
       }
     });
 

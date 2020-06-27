@@ -73,15 +73,30 @@
             <div class="row">
                 <div *ngFor="let cerd of servProducto.porcinos">
                     <div class="col-md-4 col-xs-12">
-                        <div class="card" style="width: 18rem;">
+                        <div class="card" style="width: 18rem;" [ngStyle]="{'background-color': cerd.adquirido ? '#c8e6c9' : 'whitesmoke'}">
                             <img class="card-img-top" src="/assets/img/productos/{{cerd.url}}.jpg" alt="Card image cap">
+                            <div *ngIf="cerd.oferta" class="ofertaCaption">
+                                <h1>Oferta</h1>
+                            </div>
                             <div class="card-body">
                               <h1 class="card-title">{{cerd.titulo}}</h1>
                               <div class="row">
                                 <div class="col-5 col align-self-end"><h2>${{cerd.precio}} Kg</h2></div>
-                                <div class="col-6 col align-self-end"><h4 class="tachado">${{cerd.subprecio}} Kg</h4></div>
+                                <div *ngIf="cerd.subprecio" class="col-6 col align-self-end"><h4 class="tachado">${{cerd.subprecio}} Kg</h4></div>
                             </div>
-                              <a (click)="clickComprar(cerd)" class="btn">Comprar</a>
+                              <!-- <a (click)="clickComprar(cerd)" class="btn">Comprar</a> -->
+                            </div>
+                            <div class="card-footer">
+                                <div class="row">
+                                    <div class="col-6" *ngIf="!cerd.adquirido">
+                                        <button mat-raised-button color="accent" (click)="clickComprar(cerd)">COMPRAR</button>
+                                    </div>
+                                    <div *ngIf="cerd.adquirido" class="col-6">
+                                        <button mat-mini-fab id="check">
+                                            <mat-icon>done_outline</mat-icon>
+                                        </button>
+                                    </div>
+                                </div>
                             </div>
                           </div>
                     </div>

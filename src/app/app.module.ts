@@ -32,6 +32,7 @@ import { ProductoDialogComponent } from './dialog/producto-dialog/producto-dialo
 import { CompraComponent } from './pages/compra/compra.component';
 import { FinCompraComponent } from './dialog/fin-compra/fin-compra.component';
 import { PagoCompraComponent } from './pages/pago-compra/pago-compra.component';
+import { MapaComponent } from './pages/mapa/mapa.component';
 
 
 
@@ -48,7 +49,8 @@ import { PagoCompraComponent } from './pages/pago-compra/pago-compra.component';
     ProductoDialogComponent,
     CompraComponent,
     FinCompraComponent,
-    PagoCompraComponent
+    PagoCompraComponent,
+    MapaComponent
   ],
   imports: [
     BrowserModule,
