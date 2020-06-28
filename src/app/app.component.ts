@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+<<<<<<< HEAD
 import { MatDialog, MatDialogConfig,MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 
 
@@ -9,6 +10,11 @@ export interface DialogData{
   subt : string;
   descri : string;
 }
+=======
+
+
+
+>>>>>>> master
 
 @Component({
   selector: 'app-root',
@@ -16,10 +22,14 @@ export interface DialogData{
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  constructor(private dialog : MatDialog){}
+  constructor(){}
   
   title = 'muestraCarn1';
+<<<<<<< HEAD
   nombre : string;
+=======
+
+>>>>>>> master
 
 
 

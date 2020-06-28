@@ -26,6 +26,7 @@ import { ListHomeDialogComponent } from './dialog/list-home-dialog/list-home-dia
 import {HttpClientModule} from '@angular/common/http';
 import { from } from 'rxjs';
 import { OfertasComponent } from './pages/ofertas/ofertas.component';
+<<<<<<< HEAD
 import { FooterComponent } from './shared/footer/footer.component';
 import { CarritoComponent } from './pages/carrito/carrito.component';
 import { ProductoDialogComponent } from './dialog/producto-dialog/producto-dialog.component';
@@ -35,6 +36,9 @@ import { PagoCompraComponent } from './pages/pago-compra/pago-compra.component';
 import { MapaComponent } from './pages/mapa/mapa.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
+=======
+import { FooterComponent } from './pages/footer/footer.component';
+>>>>>>> master
 
 
 
@@ -46,6 +50,7 @@ import { environment } from '../environments/environment';
     HomeComponent,
     ListHomeDialogComponent,
     OfertasComponent,
+<<<<<<< HEAD
     FooterComponent,
     CarritoComponent,
     ProductoDialogComponent,
@@ -53,6 +58,9 @@ import { environment } from '../environments/environment';
     FinCompraComponent,
     PagoCompraComponent,
     MapaComponent
+=======
+    FooterComponent
+>>>>>>> master
   ],
   imports: [
     BrowserModule,
